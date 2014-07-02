@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>A Bootstrap Example</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Susanna Dong et al">
+<meta name="description" content="Educational piece for CS2340">
+
+<!-- http://bootswatch.com/ -->
+<link rel="stylesheet" type="text/css" href="http://bootswatch.com/yeti/bootstrap.min.css" />
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- coded jQuery fail-->
+<!--
+<script type="text/javascript">
+    window.onload = function() {
+        $("#homeLink").click(function(){
+            $('#home').collapse('show');
+            $('#about').collapse('hide');
+            $('#cool').collapse('hide');
+        });
+        $("#aboutLink").click(function(){
+            $("#home").collapse('hide');
+            $("#about").collapse('show');
+            $("#cool").collapse('hide');
+        });
+        $("#coolLink").click(function(){
+            $("#home").collapse('hide');
+            $("#about").collapse('hide');
+            $("#cool").collapse('show');
+        });
+    }
+</script>
+-->
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">A Bootstrap Example</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a data-toggle="collapse" data-parent="#accordion"  id="homeLink" href="#home">Home</a></li>
+                    <li><a data-toggle="collapse" data-parent="#accordion"  id="aboutLink" href="#about">About</a></li>
+                    <li><a data-toggle="collapse" data-parent="#accordion"  id="coolLink" href="#cool">More Cool Stuff</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h1>My Bootstrap Example <img src="images/cute-baby-penguins.jpg" alt="Penguins" height="100px" /></h1>
+        <h3>I enjoy the simpler things in life - food, sleep, and the computer. And Tumblr.</h3>
+    </div>
+    
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Home</h4>
+            </div>
+            <div id="home" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Welcome to my simple Bootstrap example! Enjoy!
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">About</h4>
+            </div>
+            <div id="about" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Some interesting facts about <b>Susanna Dong</b>:</p>
+                    <ul>
+                        <li>My first programming language was HTML/CSS because I wanted to win the Site Spotlight on a virtual pets website called Neopets. I unknowingly became a web developer, but my self-education only took me so far.</li>
+                        <li>During high school, I ended up in a general computing class instead of AP Computer Science. (I did learn about a lot of different aspects of computing - hardware, binary, HTML, general programming, etc.) I started actual programming (Python, Java, assembly, etc.) in college.</li>
+                        <li>I have been fencing for 5 years, starting from my sophomore year of high school. I've fenced epee for 4 years, and foil in 1 year. I'm also Vice President of the Yellow Jacket Fencing Club.</li>
+                        <li>I've been drawing since I was able to hold tools of creativity.</li>
+                        <li>I enjoy the simpler things in life - food, sleep, and the computer. And Tumblr.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">More Cool Stuff</h4>
+            </div>
+            <div id="cool" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <h5>Sources</h5>
+                        <li><a href="http://www.w3schools.com/js/" target="_blank">W3Schools JS</a></li>
+                        <li><a href="http://api.jqueryui.com/" target="_blank">jQuery API</a></li>
+                        <li><a href="http://getbootstrap.com/javascript/" target="_blank">Bootstrap, JavaScript, and jQuery</a></li>
+                        <li><a href="http://getbootstrap.com/components/" target="_blank">Bootstrap components</a></li>
+                        <li><a href="http://www.codecademy.com/en/tracks/javascript" target="_blank">JavaScript Codecademy tutorial</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

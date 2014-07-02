@@ -1,0 +1,360 @@
+/*
+YJFC CSS styling
+
+general order of code:
+-background
+-sizing
+-fonts
+
+http://www.hotdesign.com/seybold/index.html  // code conventions
+
+http://colorschemedesigner.com/
+colors used:
+-F1B900  // GT gold
+-2018A8  // blue
+-FFFFFF  // white
+-000000  // black
+
+http://css-tricks.com/the-difference-between-id-and-class/
+what are the differences between ID and CLASS?
+
+fonts: helvetica (bold), garamond?
+page not loading updates?  press Ctrl + Shift + R for hard refresh (in Windows)
+*/
+
+/* general formatting for text and links */
+
+body
+{
+	background-color:#000000;
+	padding:0;
+	
+	line-height:1.5em;
+	font-family:helvetica;
+	font-size:0.75em;
+}
+h1
+{
+	font-size:2em;
+	font-weight:bold;
+}
+h2
+{
+	color:#000000;
+	font-size:1.5em;
+	font-weight:bold;
+	text-decoration:none;
+}
+h3
+{
+	color:#2018A8;
+	font-size:1.25em;
+	font-weight:bold;
+}
+a:link, a:visited, a:active
+{
+	color:#000000;
+	text-decoration:underline;
+}
+a:hover 
+{
+	color:#2018A8;
+	text-decoration:none;
+}
+hr
+{
+	background:#2018A8;
+	
+	width:75%;
+	height:1.5px;
+	
+	border:0;
+}
+ul.contents
+{
+    list-style-type:square;
+}
+
+
+/* master container */
+#bodyPanel
+{
+	background-color:#dddddd;
+	
+	width:800px;
+	margin-top:45px;
+	margin-left:auto;
+	margin-right:auto;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+/* logo and header on top */
+#headerPanel
+{
+	background-color:#F1B900;
+	
+	width:100%;
+	height:190px;
+	margin-left:auto;
+	margin-right:auto;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#infoPanelLeft
+{
+	background-color:#FFFFFF;
+	z-index:1;
+	
+	width:200px;
+	height:150px;
+	float:left;
+	
+	margin:10px;
+	padding:5px;
+	
+	text-align:center;
+	vertical-align:middle;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#infoPanelRight
+{
+	background-color:#FFFFFF;
+	z-index:1;
+	
+	width:200px;
+	height:150px;
+	float:right;
+	
+	margin:10px;
+	padding:5px;
+	
+	text-align:center;
+	vertical-align:middle;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#logo
+{
+	background-image:url("images/YJFLogoSM.png");
+	background-repeat:no-repeat;
+	
+	position:relative;
+	top:-45px;
+	
+	height:260px;
+	width:445px;
+	margin:0 auto;
+}
+
+#titlePanel
+{
+	display:block;
+	
+	width:40%;
+	padding:10px 0 10px 0;
+	margin:15px 0 5px 10px;
+	
+	text-align:center;
+	font-size:2em;
+}
+
+/* links for main menu */
+#navigation 
+{
+	display:block;
+	float:left;
+	
+	width:15%;
+	margin-top:35px;
+	margin-bottom:5px;
+	
+	text-align:left;
+	font-size:1.25em;
+}
+
+
+h3.trigger
+{
+    background-color:#eeeeff;
+}
+
+div.toggle
+{
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+/* main nav */
+div.navNotSelect
+{
+	background:#dddddd;
+	display:block;
+	width:125px;
+	height:25px;
+	
+	padding-left:10px; 
+	padding-right:10px; 
+}
+div.navNotSelect a:link, div.navNotSelect a:active, div.navNotSelect a:visited 
+{
+	color:#000000;
+	text-decoration:none;
+}
+div.navNotSelect a:hover 
+{
+	color:#F1B900;
+}
+
+div.navIsSelect
+{
+	background:#2018A8;
+	display:block;
+	width:125px;
+	height:25px;
+	
+	padding-left:10px;
+	padding-right:10px; 
+}
+div.navIsSelect a:link, div.navIsSelect a:active, div.navIsSelect a:visited 
+{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+div.navIsSelect a:hover 
+{
+	color:#FFFFFF;
+}
+
+
+/* content */
+div.pageTitle
+{
+	/* background-color:#F1B900; */
+	
+	width:100%;
+	padding:7px 0 7px 0;
+	margin-bottom:15px;
+	
+	border-width: 2px;
+	border-bottom-width:2px;
+	border-bottom-color:#2018A8;
+	border-bottom-style:solid;
+	
+	font-size:2em;
+	font-weight:bold;
+	text-align:center;
+}
+#bigContentPanel
+{
+	background-color:#dddddd;
+	
+	width:100%;
+	/* padding-top:35px; */
+	padding-bottom:50px;
+}
+#actualContent
+{
+	background-color:#FFFFFF;
+	float:right;
+	
+	/* border-left:3px solid #2018A8; */
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+}
+
+
+/* footer */
+#footerPanel
+{
+	background-color:#F1B900;
+	clear:both;
+	
+	width:100%;
+	
+	text-align:center;
+}
+
+
+/* Officer profiles */
+div.officerTemplate
+{
+	width:100%;
+	clear:left;
+	margin:0 auto;
+}
+img.officerImage
+{
+	padding:5px;
+}
+div.officerText
+{
+	margin-left:200px;  /* must be above image width */
+}
+div.officerTitle
+{	
+	padding:5px 10px 5px 10px;
+	
+	border-width:2px;
+	border-top-width:2px;
+	border-top-color:#2018A8;
+	border-top-style:solid;
+	border-bottom-width:2px;
+	border-bottom-color:#2018A8;
+	border-bottom-style:solid;
+	
+	font-weight:bold;
+	font-size:1.5em;
+}
+.officerName
+{
+	padding-left:10px;
+	
+	font-size:1.25em;
+	font-weight:bold;
+	line-height:1em;
+}
+.officerYear
+{
+	padding-left:10px;
+	
+	font-size:1em;
+	font-weight:normal;
+	line-height:0.5em;
+}
+.officerWeapon
+{
+	padding-left:10px;
+	
+	font-size:1em;
+	font-weight:normal;
+	line-height:0.5em;
+}
+.officerEmail
+{
+	padding-left:10px;
+	
+	font-size:1em;
+	font-weight:normal;
+	line-height:0.5em;
+}
+.officerDescription
+{
+	padding-left:10px;
+	
+	font-size:1em;
+	font-weight:normal;
+	line-height:1em;
+}
