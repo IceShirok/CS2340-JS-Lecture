@@ -14,21 +14,76 @@
     function changeBlockColor() {
         document.getElementById("block").style.backgroundColor = document.getElementById("color").value;
     }
+    
+    function toggleInfo() {
+        var info = document.getElementById("info");
+        if (info.style.display=="none") {
+            info.style.display = "block";
+        } else {
+            info.style.display = "none";
+        }
+    }
 </script>
+
+<style>
+    div {
+        background-color:green;
+        color:white;
+        width:300px;
+    }
+    
+    #toggle {
+        background-color:skyblue;
+    }
+    
+    #info {
+        background-color:green;
+        color:white;
+    }
+</style>
 
 </head>
 
 <body>
- 
-Your greatest skill: <input type="text" name="skill" id="skill"><br>
-Last name: <input type="text" name="lname" id="lname"><br>
-<input type="submit" value="Submit" onClick="introduceYourself()">
 
-<p style="font-family:Arial;font-size:18px;" id="results">Submit some results!</p>
+    <table>
+        <tr>
+            <td>Your greatest skill:</td>
+            <td><input type="text" name="skill" id="skill"></td>
+        </tr>
+        <tr>
+            <td>Last name:</td>
+            <td><input type="text" name="lname" id="lname"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit" onClick="introduceYourself()"></td>
+        </tr>
+    </table>
 
-Choose a color: <input type="text" name="color" id="color"><br>
-<input type="submit" value="Submit" onClick="changeBlockColor()">
-<div id="block" style="width:100px; height:100px; background-color:black;"></div>
+    <p style="font-family:Arial;font-size:18px;" id="results">Submit some results!</p>
+
+    Choose a color: <input type="text" name="color" id="color"><br>
+    <input type="submit" value="Submit" onClick="changeBlockColor()">
+
+    <div id="block" style="width:100px; height:100px; background-color:black;"></div>
+
+    <br />
+
+    <div id="toggle">
+        <a href="#" onClick="toggleInfo()">Click me to view more info!</a>
+    </div>
+    <div id="info" style="display:none;">
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+        Hello world!<br />
+    </div>
 
 </body>
 </html>
