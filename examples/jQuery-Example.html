@@ -3,6 +3,7 @@
 <head>
 
 <title>A JavaScript Example</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script>
     function introduceYourself() {
@@ -15,13 +16,11 @@
         document.getElementById("block").style.backgroundColor = document.getElementById("color").value;
     }
     
-    function toggleInfo() {
-        var info = document.getElementById("info");
-        if (info.style.display=="none") {
-            info.style.display = "block";
-        } else {
-            info.style.display = "none";
-        }
+    window.onload = function() {
+        $('#info').hide();
+        $("#toggleLink").click(function(){
+            $('#info').slideToggle();
+        });
     }
 </script>
 
@@ -70,9 +69,9 @@
     <br />
 
     <div id="toggle">
-        <a href="#" onClick="toggleInfo()">Click me to view more info!</a>
+        <a id="toggleLink" href="#">Click me to view more info!</a>
     </div>
-    <div id="info" style="display:none;">
+    <div id="info">
         Hello world!<br />
         Hello world!<br />
         Hello world!<br />
